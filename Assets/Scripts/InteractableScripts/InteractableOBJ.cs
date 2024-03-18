@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InteractableOBJ : MonoBehaviour
 {
+    [SerializeField] public TextMeshProUGUI NavMessageText;
+    [SerializeField] public string NavMessage;
     public enum Type
     {
         nothing,
@@ -21,16 +24,17 @@ public class InteractableOBJ : MonoBehaviour
     {
 
     }
-    void Pickup()
+    public void Pickup()
     {
-
+        Debug.Log("You picked up..." + gameObject.name);
+        this.gameObject.SetActive(false);
     }
     void Dialogue()
     {
 
     }
-    void Info()
+    public void Info()
     {
-
+        Debug.Log(NavMessage);
     }
 }

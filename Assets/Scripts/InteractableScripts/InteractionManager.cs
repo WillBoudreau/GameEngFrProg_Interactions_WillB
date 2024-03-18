@@ -15,7 +15,18 @@ public class InteractionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        if (Input.GetKeyDown(KeyCode.E) && pickUp == true)
+        {
+            Debug.Log("E pressed");
+            if (Interactable.type == InteractableOBJ.Type.pickup)
+            {
+                Interactable.Pickup();
+            }
+            else if (Interactable.type == InteractableOBJ.Type.info)
+            {
+                Interactable.Info();
+            }
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
