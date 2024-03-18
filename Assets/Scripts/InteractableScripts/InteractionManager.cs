@@ -35,6 +35,11 @@ public class InteractionManager : MonoBehaviour
             pickUp = other.gameObject;
             Interactable = other.GetComponent<InteractableOBJ>();
         }
+        else if(other.gameObject.CompareTag("Info"))
+        {
+            pickUp = other.gameObject;
+            Interactable = other.GetComponent<InteractableOBJ>();
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {

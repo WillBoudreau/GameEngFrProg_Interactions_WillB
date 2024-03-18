@@ -36,5 +36,6 @@ public class InteractableOBJ : MonoBehaviour
     public void Info()
     {
         Debug.Log(NavMessage);
+
     }
 }
