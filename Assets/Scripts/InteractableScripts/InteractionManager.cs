@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
 {
-    public GameObject pickUp = null;
+    public GameObject interact = null;
     public InteractableOBJ Interactable = null;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class InteractionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && pickUp == true)
+        if (Input.GetKeyDown(KeyCode.E) && interact == true)
         {
             Debug.Log("E pressed");
             if (Interactable.type == InteractableOBJ.Type.pickup)
@@ -32,12 +32,12 @@ public class InteractionManager : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Interactable"))
         {
-            pickUp = other.gameObject;
+            interact = other.gameObject;
             Interactable = other.GetComponent<InteractableOBJ>();
         }
         else if(other.gameObject.CompareTag("Info"))
         {
-            pickUp = other.gameObject;
+            interact = other.gameObject;
             Interactable = other.GetComponent<InteractableOBJ>();
         }
     }
@@ -45,7 +45,7 @@ public class InteractionManager : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Interactable"))
         {
-            pickUp = null;
+            interact = null;
             Interactable = null;
         }
     }

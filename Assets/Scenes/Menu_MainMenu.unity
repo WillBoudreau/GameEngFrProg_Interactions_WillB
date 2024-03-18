@@ -998,8 +998,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -265, y: 250}
-  m_SizeDelta: {x: -530, y: -500}
+  m_AnchoredPosition: {x: -260.10278, y: 142.75052}
+  m_SizeDelta: {x: -520.2056, y: -285.5005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344111772
 MonoBehaviour:
@@ -1711,7 +1711,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4333774210845845279, guid: 67c984b8d22d335499763b485061d84d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5759766985723079096, guid: 67c984b8d22d335499763b485061d84d, type: 3}
     - {fileID: 8330785534169008295, guid: 67c984b8d22d335499763b485061d84d, type: 3}
@@ -1724,6 +1725,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6691279869135169085, guid: 67c984b8d22d335499763b485061d84d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1416425929}
+    - targetCorrespondingSourceObject: {fileID: 6691279869135169085, guid: 67c984b8d22d335499763b485061d84d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1416425935}
   m_SourcePrefab: {fileID: 100100000, guid: 67c984b8d22d335499763b485061d84d, type: 3}
 --- !u!1 &726186215
 GameObject:
@@ -3268,8 +3272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 852, y: 684}
+  m_AnchoredPosition: {x: -0.4855, y: 0.9803}
+  m_SizeDelta: {x: 931.0227, y: 522.0524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381790171
 MonoBehaviour:
@@ -3551,6 +3555,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1416425935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416425921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50703e0ec75be04d959019b5cc91424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interact: {fileID: 0}
+  Interactable: {fileID: 0}
 --- !u!1 &1545410697
 GameObject:
   m_ObjectHideFlags: 0

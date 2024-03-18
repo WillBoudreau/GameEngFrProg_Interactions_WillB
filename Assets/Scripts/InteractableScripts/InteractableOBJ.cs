@@ -28,6 +28,10 @@ public class InteractableOBJ : MonoBehaviour
     {
         Debug.Log("You picked up..." + gameObject.name);
         this.gameObject.SetActive(false);
+        if(gameObject.name == "Coin")
+        {
+            Debug.Log("Hello!");
+        }
     }
     void Dialogue()
     {
@@ -36,6 +40,6 @@ public class InteractableOBJ : MonoBehaviour
     public void Info()
     {
         Debug.Log(NavMessage);
-
+        NavMessageText.text = NavMessage;
     }
 }
