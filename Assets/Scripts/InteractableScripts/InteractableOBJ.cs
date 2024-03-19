@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractableOBJ : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI NavMessageText;
     [SerializeField] public string NavMessage;
+    public float Delay = 5f;
     public enum Type
     {
         nothing,
@@ -40,6 +42,12 @@ public class InteractableOBJ : MonoBehaviour
     public void Info()
     {
         Debug.Log(NavMessage);
+        StartCoroutine(InfoDisplay(5f,NavMessage));
+    }
+    IEnumerator InfoDisplay(float Delay, string messageText)
+    {
         NavMessageText.text = NavMessage;
+        yield return new WaitForSeconds(Delay);
+        NavMessageText.text = null;
     }
 }
