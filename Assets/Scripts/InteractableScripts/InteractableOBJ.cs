@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class InteractableOBJ : MonoBehaviour
 {
-    [SerializeField] public TextMeshProUGUI NavMessageText;
-    [SerializeField] public string NavMessage;
+    [SerializeField] public TextMeshProUGUI MessageText;
+    [SerializeField] public string Message;
 
     public float Delay = 5f;
     public enum Type
@@ -22,7 +22,7 @@ public class InteractableOBJ : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NavMessageText.text = null;
+        MessageText.text = null;
     }
     void Nothing()
     {
@@ -43,13 +43,13 @@ public class InteractableOBJ : MonoBehaviour
     }
     public void Info()
     {
-        Debug.Log(NavMessage);
-        StartCoroutine(InfoDisplay(5f,NavMessage));
+        Debug.Log(Message);
+        StartCoroutine(InfoDisplay(5f,Message));
     }
     IEnumerator InfoDisplay(float Delay, string messageText)
     {
-        NavMessageText.text = NavMessage;
+        MessageText.text = Message;
         yield return new WaitForSeconds(Delay);
-        NavMessageText.text = null;
+        MessageText.text = null;
     }
 }
