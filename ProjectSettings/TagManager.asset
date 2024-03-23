@@ -9,6 +9,7 @@ TagManager:
   - Pickup
   - Interactable
   - Info
+  - Dialogue
   layers:
   - Default
   - TransparentFX

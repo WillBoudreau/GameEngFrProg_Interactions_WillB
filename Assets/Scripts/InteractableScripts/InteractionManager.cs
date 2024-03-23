@@ -27,6 +27,10 @@ public class InteractionManager : MonoBehaviour
             {
                 Interactable.Info();
             }
+            else if(Interactable.type == InteractableOBJ.Type.dialogue)
+            {
+                Interactable.Dialogue();
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -37,6 +41,11 @@ public class InteractionManager : MonoBehaviour
             Interactable = other.GetComponent<InteractableOBJ>();
         }
         else if(other.gameObject.CompareTag("Info"))
+        {
+            interact = other.gameObject;
+            Interactable = other.GetComponent<InteractableOBJ>();
+        }
+        else if(other.gameObject.CompareTag("Dialogue"))
         {
             interact = other.gameObject;
             Interactable = other.GetComponent<InteractableOBJ>();

@@ -9,7 +9,7 @@ public class InteractableOBJ : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI MessageText;
     [SerializeField] public string Message;
-
+    [SerializeField] public string[] sentence;
     public float Delay = 5f;
     public enum Type
     {
@@ -37,9 +37,10 @@ public class InteractableOBJ : MonoBehaviour
             Debug.Log("Hello!");
         }
     }
-    void Dialogue()
+    public void Dialogue()
     {
-
+        FindObjectOfType<DialogueManager>().StartDialogue(sentence);
+        Debug.Log("Started Dialogue");
     }
     public void Info()
     {
