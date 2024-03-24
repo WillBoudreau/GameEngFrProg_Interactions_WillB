@@ -27465,9 +27465,9 @@ MonoBehaviour:
   MessageText: {fileID: 0}
   Message: HEYO!
   sentence:
-  - Yo
-  - You want to hear a pun?
-  - You are chill just like Will!
+  - Hello
+  - I am Bobbing Bob
+  - What ever I do, I don't stop bobbing
   Delay: 5
   type: 2
 --- !u!114 &867092211
