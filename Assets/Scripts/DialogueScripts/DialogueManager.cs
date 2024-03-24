@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public GameObject DialoguePanel;
     public Dialogue dialogue;
+
+    public GameObject player;
     
     public Queue<string> sentences;
 
@@ -25,6 +27,10 @@ public class DialogueManager : MonoBehaviour
         sentences.Clear();
         Debug.Log("Started Dialogue");
         DialoguePanel.SetActive(true);
+
+        player.GetComponent<ChardterController2D>().enabled = false;
+
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         foreach(string sentence in dialogueSentence)
         {
             Debug.Log(sentence);
@@ -42,21 +48,15 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
         nameText.text = dialogue.name;
-        if(dialogue.name == null)
-        {
-            Debug.Log("name is null");
-        }
-        else if (nameText == null)
-        {
-            Debug.Log("name is full null");
-        }
-        Debug.Log(dialogueText.text + "1");
-        Debug.Log(dialogue.name);
-        Debug.Log(nameText);
+
+        // Debug.Log(dialogueText.text + "1");
+        // Debug.Log(dialogue.name);
+        // Debug.Log(nameText);
     }
     public void EndDialogue()
     {
         sentences.Clear();
         DialoguePanel.SetActive(false);
+        player.GetComponent<ChardterController2D>().enabled = true;
     }
 }
