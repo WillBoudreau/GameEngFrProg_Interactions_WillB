@@ -1,0 +1,2 @@
+CoinPNG - Licence(Public domain) - src:https://pngteam.com/png/59740.html
+Asset Pack - Licence(Standard Unity Asset Store EULA) - src:https://assetstore.unity.com/packages/2d/free-2d-mega-pack-177430#content 
