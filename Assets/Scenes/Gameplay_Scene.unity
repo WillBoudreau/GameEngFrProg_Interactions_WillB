@@ -27466,10 +27466,8 @@ MonoBehaviour:
   Message: HEYO!
   sentence:
   - Yo
-  - Yo
-  - Yo
-  - Yo
-  - Yo
+  - You want to hear a pun?
+  - You are chill just like Will!
   Delay: 5
   type: 2
 --- !u!114 &867092211
@@ -27485,10 +27483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Will
-  sentences:
-  - Helloooooo
-  - You want to hear my favorite pun?
-  - You must be chill, just like Will!
+  sentences: []
 --- !u!58 &867092212
 CircleCollider2D:
   m_ObjectHideFlags: 0
